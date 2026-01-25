@@ -1,0 +1,76 @@
+.main-content {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 15px 0 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(230, 230, 230);
+}
+.state-section {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.state-card {
+  background-color: white;
+  width: 250px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 5px 20px;
+  color: black;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.documents-section {
+  width: 100%;
+  height: 80%;
+}
+.projects-container {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: start;
+  gap: 4%;
+  padding: 0px 0 20px 10px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+.create-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around !important;
+  border: 2px dashed #78a083;
+  color: #78a083;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+}
+.create-card button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around !important;
+  height: 100%;
+  width: 100%;
+}
+.create-card button:hover {
+  background-color: transparent;
+  color: #78a083;
+}
+.create-card svg {
+  font-size: 2rem;
+}
+
+.create-card:hover {
+  background: #e1e4e3;
+  transform: translateY(-3px);
+}

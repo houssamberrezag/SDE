@@ -1,0 +1,151 @@
+header {
+  background-color: rgba(29, 29, 29, 0.664);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-primary);
+  cursor: pointer;
+}
+.logo h1 {
+  margin: 0;
+  color: var(--white);
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+header nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  transition: 0.3s ease;
+}
+header nav a:hover {
+  color: var(--color2);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+.auth-buttons a {
+  padding: 8px 15px;
+  border-radius: var(--border-radius);
+  transition: 0.3s ease;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.profile .profile-img {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+.profile .profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.profile-name {
+  font-weight: bold;
+}
+.drop-menu {
+  position: absolute;
+  top: 7.5vh;
+  left: 0;
+  background-color: var(--white);
+  color: var(--color2);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1001;
+  width: 180px;
+  display: none;
+}
+.drop-menu.active {
+  display: flex;
+  animation: fadeIn 0.3s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.drop-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+.drop-menu ul li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 0px 10px;
+  border-bottom: 1px solid var(--color2);
+}
+.drop-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--color2);
+  transition: 0.3s ease;
+}
+.drop-menu li:hover {
+  background-color: var(--color2);
+}
+.drop-menu li:hover a,
+.drop-menu li:hover svg {
+  color: var(--white);
+}
+.drop-menu-button {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  text-align: left;
+}
+.drop-menu-button:hover {
+  background: none;
+}
+.drop-menu-button:hover svg {
+  color: var(--color2);
+}
+
+.drop-menu-button.active svg {
+  color: var(--color2);
+}

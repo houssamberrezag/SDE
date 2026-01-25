@@ -1,0 +1,91 @@
+.editor-page {
+  background: #f5f7fa;
+  min-height: 100vh;
+  color: var(--color6);
+}
+
+/* HEADER */
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #344955;
+}
+
+.editor-title {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+  width: 60%;
+}
+
+.editor-title:focus {
+  outline: none;
+}
+
+/* BUTTONS */
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #78a083;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #50727b;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* TOOLBAR */
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 10px 24px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toolbar .active {
+  background: #78a083;
+  color: white;
+}
+
+/* EDITOR */
+
+.editor-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 70vh;
+  color: var(--color6) !important;
+}
+
+.ProseMirror {
+  min-height: 60vh;
+  outline: none;
+}
