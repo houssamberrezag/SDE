@@ -1,7 +1,7 @@
 import "./projectCard.css";
 
 export default function ProjectCard({ project, onOpen }) {
-  const userId = localStorage.getItem("userId"); // id ديال user الحالي
+  const userId = localStorage.getItem("userId");
 
   const isOwner = project.owner._id === userId;
   const isCollaborator = project.collaborators.some((c) => c._id === userId);

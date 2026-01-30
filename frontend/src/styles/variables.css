@@ -58,7 +58,6 @@ h6 {
 /* Buttons */
 button {
   font-family: var(--font-primary);
-  background-color: var(--color1);
   color: var(--white);
   border: none;
   border-radius: var(--border-radius);
@@ -143,3 +142,40 @@ a:hover {
   font-size: 1.8rem;
   color: red;
 }
+.btn-modal {
+  background-color: var(--color1);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btn-modal:hover {
+  background-color: var(--color2);
+}
+.btn-primary {
+  background-color: var(--color5);
+}
+.btn-primary:hover {
+  background-color: var(--color1);
+}
+.btn-delete {
+  background-color: #c94c4c;
+}
+.btn-delete:hover {
+  background-color: #a83a3a;
+}
+.btn-edit {
+  background-color: #50727b;
+}
+.btn-edit:hover {
+  background-color: #345a61;
+}
+/* ===============================
+   UTILITIES
+   =============================== */

@@ -32,4 +32,23 @@ const getProjectsForUser = async (req, res) => {
   }
 };
 
-module.exports = { createProject, getProjectsForUser };
+const updateProject = async (req, res) => {
+  const projectId = req.params.id;
+  const { title, content, tags, collaborators } = req.body;
+  try {
+    const project = await Project.findById(projectId);
+    if (!project) {
+      return res.status(404).json({ message: "Project not found" });
+    }
+    project.title = title;
+    project.content = content;
+    project.tags = tags;
+    project.collaborators = collaborators;
+    await project.save();
+    res.json({ message: "Project updated successfully" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+module.exports = { createProject, getProjectsForUser, updateProject };
